@@ -5,12 +5,28 @@ def toh(n):
 	x = []
 	for i in range(n,0,-1):
 		a.append(i)
-	print a
+	#print a
 	cnt = 0
-	while len(b)<n:
-		move(a,c)
-		move(a,b)
-		move(b,c)
+	while 1:
+		if n%2 == 0:
+			if len(c)<n and len(b)<n:
+				move(a,c)
+				print ("a=",a ,"c=",c)
+			if len(c)<n and len(b)<n:
+				move(a,b)
+				print ("a=",a ,"b=",b)
+		else:
+			if len(c)<n and len(b)<n:
+				move(a,b)
+				print ("a=",a ,"b=",b)
+			if len(c)<n and len(b)<n:
+				move(a,c)
+				print ("a=",a ,"c=",c)
+		if len(c)<n and len(b)<n:
+			move(b,c)
+			print ("b=",b ,"c=",c)
+		if len(b)==n:
+			break
 	print b
 
 def move(x,y):
