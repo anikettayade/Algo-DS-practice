@@ -9,20 +9,20 @@ def toh(n):
 	cnt = 0
 	while 1:
 		if n%2 == 0:
-			if len(c)<n and len(b)<n:
+			if len(b)<n:
 				move(a,c)
 				print ("a=",a ,"c=",c)
-			if len(c)<n and len(b)<n:
+			if len(b)<n:
 				move(a,b)
 				print ("a=",a ,"b=",b)
 		else:
-			if len(c)<n and len(b)<n:
+			if  len(b)<n:
 				move(a,b)
 				print ("a=",a ,"b=",b)
-			if len(c)<n and len(b)<n:
+			if  len(b)<n:
 				move(a,c)
 				print ("a=",a ,"c=",c)
-		if len(c)<n and len(b)<n:
+		if  len(b)<n:
 			move(b,c)
 			print ("b=",b ,"c=",c)
 		if len(b)==n:
@@ -30,8 +30,7 @@ def toh(n):
 	print b
 
 def move(x,y):
-	#print x
-	#print y
+
 	if len(x)== 0:
 		ele = y.pop()
 		x.append(ele)
@@ -48,6 +47,6 @@ def move(x,y):
 		ele=x.pop()
 		y.append(ele)
 		return
-n=4
+n=3
 toh(n)
 	
